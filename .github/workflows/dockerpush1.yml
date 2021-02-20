@@ -1,11 +1,11 @@
-name: "DockerPush"
+name: "DockerPush1"
 on:
   workflow_dispatch:
   
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: DockerPush
+    name: DockerPush1
     steps:
       - name: Checkout master
         uses: actions/checkout@master
@@ -13,7 +13,7 @@ jobs:
         uses: ilteoood/docker_buildx@master
         with:
           publish: true
-          imageName: noobx/jd
+          imageName: xiaokonglong/jd
           dockerFile: docker/Dockerfile
           platform: linux/amd64,linux/arm64,linux/arm/v7
           tag: gitee
